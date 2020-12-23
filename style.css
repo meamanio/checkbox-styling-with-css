@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 25px;
+  font-family: sans-serif;
+}
+.option {
+  display: block;
+  margin-bottom: 25px;
+}
+.check {
+  padding-left: 1.2em; /** Чтобы отодвинуть текст от инпута*/
+}
+.check-input {
+  /*! скрываем чекбокс кроссбраузерно !*/
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.check-box {
+  position: absolute;
+  margin-top: 0.2em;
+  margin-left: -1em;
+  width: 0.6em;
+  height: 0.6em;
+  box-shadow: 0 0 0 0.1em #4a90e2;
+  border-radius: 0.05em;
+  background-color: white;
+}
+.check-input:checked + .check-box {
+  background-color: #4a90e2;
+  background-image: url("img/check.svg");
+}
+.check-input:focus + .check-box {
+  box-shadow: 
+    0 0 0 0.1em #4a90e2,
+    0 0 0 0.2em #7ed321;
+}
+.check-input:disabled + .check-box {
+  box-shadow: 0 0 0 0.1em #9b9b9b;
+}
+.check-input:checked:disabled + .check-box {
+  background-color: #9b9b9b;
+}
